@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>StudyVerse – Programming Study Materials</title>
+  <link rel="stylesheet" href="project.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="icon" href="img/logo.png">
+</head>
+<body>
+  <header class="navbar">
+    <div class="nav-logo">
+      <img src="img/logo.png" alt="StudyVerse Logo">
+      <span>StudyVerse</span>
+    </div>
+    <nav>
+      <a href="#materials" class="nav-link">Materials</a>
+      <a href="#cheatsheets" class="nav-link">Cheat Sheets</a>
+      <a href="#tutorials" class="nav-link">Tutorials</a>
+      <a href="#resources" class="nav-link">Resources</a>
+      <a href="#about" class="nav-link">About</a>
+    </nav>
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme"></button>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1 class="hero-title">Ace Programming with the Best Study Materials</h1>
+      <p class="hero-subtitle">
+        Download notes, cheat sheets, and curated tutorials for C/C++, Python, Java, Web, and more.<br>
+        <span class="brand">StudyVerse</span> – Your one-stop hub for coding success.
+      </p>
+    </div>
+    <div class="hero-graphic">
+      <!-- Reliable SVG illustration -->
+      <img src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif" alt="Study Illustration" style="width:320px;max-width:100%;border-radius:16px;">
+    </div>
+  </section>
+
+  <section class="features" id="materials">
+    <h2 class="section-title">Featured Study Materials</h2>
+    <div class="card-grid">
+      <div class="feature-card animate" data-course="c">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C/C++" class="card-icon">
+        <h3>C/C++ Notes</h3>
+        <p>Comprehensive notes covering syntax, data structures, algorithms, and sample programs.</p>
+        <a href="#" class="card-link" target="_blank">Download PDF →</a>
+      </div>
+      <div class="feature-card animate" data-course="python" style="animation-delay:0.1s">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="card-icon">
+        <h3>Python Quick Guide</h3>
+        <p>Essential Python concepts, tips, and code snippets for beginners and intermediates.</p>
+        <a href="#" class="card-link" target="_blank">Download PDF →</a>
+      </div>
+      <div class="feature-card animate" data-course="java" style="animation-delay:0.2s">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" class="card-icon">
+        <h3>Java Essentials</h3>
+        <p>OOP, collections, exception handling, and more in a concise, exam-ready format.</p>
+        <a href="#" class="card-link" target="_blank">Download PDF →</a>
+      </div>
+      <div class="feature-card animate" data-course="web" style="animation-delay:0.3s">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="Web" class="card-icon">
+        <h3>Web Dev Crash Course</h3>
+        <p>HTML, CSS, JavaScript basics, responsive design, and project templates.</p>
+        <a href="#" class="card-link" target="_blank">Download PDF →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="paths" id="cheatsheets">
+    <h2 class="section-title">Cheat Sheets</h2>
+    <div class="card-grid">
+      <div class="path-card animate">
+        <h3>Python Cheat Sheet</h3>
+        <ul>
+          <li>Syntax & Data Types</li>
+          <li>Common Libraries</li>
+          <li>File I/O & More</li>
+        </ul>
+        <a href="#" class="card-link" target="_blank">Download →</a>
+      </div>
+      <div class="path-card animate" style="animation-delay:0.4s">
+        <h3>JavaScript Cheat Sheet</h3>
+        <ul>
+          <li>ES6+ Syntax</li>
+          <li>DOM & Events</li>
+          <li>Array Methods</li>
+        </ul>
+        <a href="#" class="card-link" target="_blank">Download →</a>
+      </div>
+      <div class="path-card animate" style="animation-delay:0.4s">
+        <h3>SQL Cheat Sheet</h3>
+        <ul>
+          <li>Queries & Joins</li>
+          <li>Functions</li>
+          <li>Best Practices</li>
+        </ul>
+        <a href="#" class="card-link" target="_blank">Download →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="community" id="tutorials">
+    <h2 class="section-title">Top Tutorials</h2>
+    <div class="community-content animate">
+      <img src="https://undraw.co/api/illustrations/8b8b1b4b-7c2c-4e2e-9e3e-1e7e7e7e7e7" alt="Tutorials" class="community-img">
+      <div>
+        <p>
+          Explore step-by-step tutorials for DSA, OOP, Web Projects, and more.<br>
+          <a href="#" class="cta-btn secondary" target="_blank">View Tutorials</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="resources" id="resources">
+    <h2 class="section-title">Other Resources</h2>
+    <div class="resource-list">
+      <a href="#" class="resource-link animate" target="_blank">Competitive Programming</a>
+      <a href="#" class="resource-link animate" style="animation-delay:0.1s" target="_blank">Interview Q&A</a>
+      <a href="#" class="resource-link animate" style="animation-delay:0.2s" target="_blank">Project Ideas</a>
+      <a href="#" class="resource-link animate" style="animation-delay:0.3s" target="_blank">Blog</a>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <h2 class="section-title">About StudyVerse</h2>
+    <p class="about-text animate">
+      StudyVerse is your all-in-one platform for programming study materials, cheat sheets, and tutorials.<br>
+      Our mission is to help students and self-learners master coding with high-quality, accessible resources.
+    </p>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-brand">
+      <img src="img/logo.png" alt="StudyVerse Logo">
+      <span>StudyVerse</span>
+    </div>
+    <div class="footer-links">
+      <a href="#materials">Materials</a>
+      <a href="#cheatsheets">Cheat Sheets</a>
+      <a href="#tutorials">Tutorials</a>
+      <a href="#resources">Resources</a>
+      <a href="#about">About</a>
+    </div>
+    <div class="footer-copy">
+      © 2025 StudyVerse. All rights reserved.
+    </div>
+  </footer>
+
+  <!-- Course Detail Modal -->
+<div id="course-modal" class="modal" style="display:none;">
+  <div class="modal-content">
+    <span class="modal-close" id="modal-close">&times;</span>
+    <div id="modal-body"></div>
+  </div>
+</div>
+
+  <script src="project.js"></script>
+</body>
+</html>

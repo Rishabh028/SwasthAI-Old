@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rishabh Rajak | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header scroll-header" id="header">
+        <nav class="nav">
+            <a href="#" class="nav__logo">Portfolio</a>
+            <ul class="nav__list">
+                <li><a href="#home" class="nav__link active">Home</a></li>
+                <li><a href="#education" class="nav__link">Qualification</a></li>
+                <li><a href="#skills" class="nav__link">Skills</a></li>
+                <li><a href="#projects" class="nav__link">Projects</a></li>
+                <li><a href="#contact" class="nav__link">Contact</a></li>
+            </ul>
+            <div class="nav__toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">Hello! I'm Rishabh Rajak</h1>
+                <h2 class="hero-subtitle">Electronics & Communication Engineer</h2>
+                <p class="hero-description">Currently studying at <b>IIT Guwahati</b></p>
+                <a href="Resume.pdf" download="Rishabh's Resume.pdf" class="download-btn">
+                    <i class="fas fa-download"></i> Download My Resume
+                </a>
+            </div>
+            <div class="hero-image">
+                <img src="ProfilePic.jpg" alt="Profile Picture">
+            </div>
+        </div>
+    </section>
+<!-- QUALIFICATIONS SECTION -->
+<section class="section" id="education">
+    <h2 class="section-title" data-animate>Qualification</h2>
+    <div class="education-grid">
+        <!-- IIT Guwahati -->
+        <div class="education-card" data-animate data-animate-delay="100">
+            <div class="education-img-container">
+                <img src="IITG Large Logo.gif" alt="IIT Guwahati" class="education-img">
+            </div>
+            <div class="education-info">
+                <h3>Indian Institute of Technology, Guwahati</h3>
+                <p>B.Tech in Electronics and Communication Engineering</p>
+                <p class="education-duration">2022 - 2026</p>
+                <div class="education-actions">
+                    <a href="assets/documents/UG_Grade_Card.pdf" download="Rishabh_Rajak_IITG_UG_Grade_Card.pdf" class="btn download-btn">
+                        <i class="fas fa-download"></i> Download Grade Card
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Class 12 -->
+        <div class="education-card" data-animate data-animate-delay="200">
+            <div class="education-img-container">
+                <img src="KV LOGO.png" alt="CBSE" class="education-img">
+            </div>
+            <div class="education-info">
+                <h3>Kendriya Vidyalaya No-1 Ishapore</h3>
+                <p>Class XII (CBSE)</p>
+                <p class="education-duration">2020 - 2022</p>
+                <div class="education-actions">
+                    <a href="class12_marksheet.pdf" download="Rishabh_Rajak_Class12_Marksheet.pdf" class="btn download-btn">
+                        <i class="fas fa-download"></i> Download Marksheet
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Class 10 -->
+        <div class="education-card" data-animate data-animate-delay="300">
+            <div class="education-img-container">
+                <img src="KV LOGO.png" alt="CBSE" class="education-img">
+            </div>
+            <div class="education-info">
+                <h3>Kendriya Vidyalaya No-1 Ishapore</h3>
+                <p>Class X (CBSE)</p>
+                <p class="education-duration">2010 - 2020</p>
+                <div class="education-actions">
+                    <a href="class10_marksheet.pdf" download="Rishabh_Rajak_Class10_Marksheet.pdf" class="btn download-btn">
+                        <i class="fas fa-download"></i> Download Marksheet
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- SKILLS SECTION -->
+    <section class="section" id="skills">
+        <h2 class="section-title" data-animate>Skills</h2>
+        <div class="skills-card" data-animate data-animate-delay="200">
+            <ul class="skills-list">
+                <li class="skills-item">Programming : Python, C/C++</li>
+                <li class="skills-item">Web/ App Technologies : HTML, CSS, JavaScript, React</li>
+                <li class="skills-item">Database Management : MySQL, MongoDB</li>
+                <li class="skills-item">Operating Systems : Windows, Linux</li>
+                <li class="skills-item">Micellaneous : Git/Github, Arduino IDE, Autodesk</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section class="section" id="projects">
+        <h2 class="section-title" data-animate>Projects</h2>
+        <div class="projects-grid">
+            <!-- Add this with your other project cards -->
+            <div class="project-card" data-animate data-animate-delay="200" onclick="openProjectModal('bingochat')">
+                    <img src="BingoChat.png" alt="BingoChat" class="project-img">
+                <div class="project-info">
+                        <h3>BingoChat</h3>
+                        <p>Real-time Web-based Chat Application</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">Socket.IO</span>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card" data-animate data-animate-delay="300" onclick="openProjectModal('finflow')">
+    <img src="finflow.png" alt="Finflow" class="project-img">
+    <div class="project-info">
+        <h3>Finflow</h3>
+        <p>IoT Smart Pond Monitoring System</p>
+        <div class="project-tech">
+            <span class="tech-tag">Arduino</span>
+            <span class="tech-tag">IoT</span>
+            <span class="tech-tag">NodeMCU</span>
+        </div>
+    </div>
+</div>
+<div class="project-card" data-animate data-animate-delay="400" onclick="openProjectModal('stayfinder')">
+    <img src="stayfinder.png" alt="StayFinder" class="project-img">
+    <div class="project-info">
+        <h3>StayFinder</h3>
+        <p>Online Hotel Booking Website</p>
+        <div class="project-tech">
+            <span class="tech-tag">HTML</span>
+            <span class="tech-tag">CSS</span>
+            <span class="tech-tag">JavaScript</span>
+        </div>
+    </div>
+</div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer" id="contact">
+        <div class="footer-content">
+            <div>
+                <h3 class="footer-title">Connect with me</h3>
+            </div>
+            <div>
+                <div class="footer-links">
+                    <a href="tel:+916291688458" class="footer-link"><i class="fas fa-phone"></i> +91 6291688458</a>
+                    <a href="mailto:rishabhrajak2004@gmail.com" class="footer-link"><i class="fas fa-envelope"></i> Email</a>
+                </div>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/rishabh_0028/" target="_blank" class="social-link">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/rishabh-rajak-621318316/" target="_blank" class="social-link">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/Rishabh028" target="_blank" class="social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Rishabh Rajak. All rights reserved</p>
+        </div>
+    </footer>
+
+    <!-- SCROLL TO TOP BUTTON -->
+    <div class="scroll-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+<!-- Add this right before </body> -->
+<div id="bingochat-modal" class="project-modal">
+    <div class="modal-content">
+        <span class="close-modal" onclick="closeModal('bingochat')">&times;</span>
+        <h2>BingoChat – Real-time Web-based Chat Application</h2>
+        <div class="modal-links">
+            <a href="https://github.com/Rishabh028/BingoChat.git" target="_blank" class="modal-link">
+                <i class="fab fa-github"></i> GitHub
+            </a>
+            <a href="https://bingochat.onrender.com" target="_blank" class="modal-link">
+                <i class="fas fa-external-link-alt"></i> Live Demo
+            </a>
+        </div>
+        <div class="modal-section">
+            <h3>Overview</h3>
+            <p>BingoChat is a full-stack, real-time chat application designed with a modern web development stack. It enables seamless messaging through a clean, responsive UI and efficient backend APIs.</p>
+        </div>
+        <div class="modal-section">
+            <h3>Technologies Used</h3>
+            <div class="tech-grid">
+                <div class="tech-column">
+                    <h4>Frontend</h4>
+                    <ul>
+                        <li>React</li>
+                        <li>Vite</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                    </ul>
+                </div>
+                <div class="tech-column">
+                    <h4>Backend</h4>
+                    <ul>
+                        <li>Node.js</li>
+                        <li>Express.js</li>
+                    </ul>
+                </div>
+                <div class="tech-column">
+                    <h4>Other</h4>
+                    <ul>
+                        <li>Socket.IO</li>
+                        <li>npm</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="modal-section">
+            <h3>Key Features</h3>
+            <ul class="features-list">
+                <li>Real-time bi-directional communication using Socket.IO</li>
+                <li>Modular frontend and backend architecture</li>
+                <li>Responsive and user-friendly chat interface</li>
+                <li>Scalable code structure for future enhancements</li>
+            </ul>
+        </div>
+    </div>
+</div>
+    <script src="script.js"></script>
+<div id="finflow-modal" class="project-modal">
+    <div class="modal-content">
+        <span class="close-modal" onclick="closeModal('finflow')">&times;</span>
+        <h2>FinFlow - IoT‑enabled smart pond monitoring system</h2>
+        
+        <div class="modal-links">
+            <a href="https://github.com/Rishabh028/Finflow" target="_blank" class="modal-link">
+                <i class="fab fa-github"></i> GitHub (Main)
+            </a>
+            <a href="https://github.com/arijit-m/Finflow_ElectronicsClubIITG" target="_blank" class="modal-link">
+                <i class="fab fa-github"></i> GitHub (Electronics)
+            </a>
+            <a href="https://github.com/elecclubiitg/Finflow" target="_blank" class="modal-link">
+                <i class="fab fa-github"></i> GitHub (Club)
+            </a>
+        </div>
+        
+        <div class="modal-section">
+            <h3>Project Overview</h3>
+            <p>Finflow is an IoT‑enabled smart pond monitoring system that automatically tracks multiple water quality parameters and alerts farmers when values exceed safe thresholds.</p>
+            <div class="highlight-box">
+                <h4>Multi-Parameter Sensing:</h4>
+                <ul class="feature-highlights">
+                    <li><i class="fas fa-check-circle"></i> Ammonium ion concentration (via Berthelot reaction)</li>
+                    <li><i class="fas fa-check-circle"></i> pH measurement</li>
+                    <li><i class="fas fa-check-circle"></i> Dissolved Oxygen (O₂) level sensing</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="modal-section">
+            <h3>Sensor Suite</h3>
+            <div class="sensor-table">
+                <div class="table-row header">
+                    
+                </div>
+                <div class="table-row">
+                    <div class="table-cell">Ammonium ions</div>
+                    <div class="table-cell">AS7265x Spectrometer</div>
+                    <div class="table-cell">Colorimetric detection (Berthelot method)</div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell">pH</div>
+                    <div class="table-cell">Analog pH Sensor (e.g., SEN0161)</div>
+                    <div class="table-cell">Measures acidity/alkalinity</div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell">Dissolved Oxygen</div>
+                    <div class="table-cell">Gravity Analog DO Sensor</div>
+                    <div class="table-cell">Assesses oxygen levels for aquatic life</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="modal-section">
+            <h3>Enhanced Workflow</h3>
+            <div class="workflow-steps">
+                <div class="workflow-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h4>Water Intake</h4>
+                        <p>Pump draws pond water into analysis chamber</p>
+                    </div>
+                </div>
+                <div class="workflow-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h4>Sensor Suite Activation</h4>
+                        <ul class="sensor-activation">
+                            <li>pH sensor reads acidity level</li>
+                            <li>DO sensor determines oxygen concentration</li>
+                            <li>AS7265x detects ammonium ions via titration</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="workflow-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h4>Data Processing</h4>
+                        <ul>
+                            <li>Parameters time-stamped via NTP</li>
+                            <li>Values uploaded to cloud via NodeMCU</li>
+                            <li>Threshold breaches trigger farmer alerts</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="modal-section">
+            <h3>Technical Summary</h3>
+            <div class="tech-summary">
+                <div class="tech-block">
+                    <i class="fas fa-microchip"></i>
+                    <h4>Microcontrollers</h4>
+                    <p>Arduino Mega, NodeMCU</p>
+                </div>
+                <div class="tech-block">
+                    <i class="fas fa-wifi"></i>
+                    <h4>Connectivity</h4>
+                    <p>Wi-Fi, NTP, Cloud logging</p>
+                </div>
+                <div class="tech-block">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <h4>Sensors</h4>
+                    <p>AS7265x, pH sensor, DO sensor</p>
+                </div>
+                <div class="tech-block">
+                    <i class="fas fa-bell"></i>
+                    <h4>Alert System</h4>
+                    <p>Real-time notifications</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="modal-section impact-section">
+            <h3>Impact</h3>
+            <p>Helps fish farmers prevent:</p>
+            <div class="impact-grid">
+                <div class="impact-item">
+                    <i class="fas fa-skull-crossbones"></i>
+                    <p>Water toxicity</p>
+                </div>
+                <div class="impact-item">
+                    <i class="fas fa-lungs"></i>
+                    <p>Hypoxia conditions</p>
+                </div>
+                <div class="impact-item">
+                    <i class="fas fa-vial"></i>
+                    <p>pH imbalance</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- StayFinder Modal -->
+<div id="stayfinder-modal" class="project-modal">
+    <div class="modal-content">
+        <span class="close-modal" onclick="closeModal('stayfinder')">&times;</span>
+        <h2>StayFinder – Online Hotel Booking Website</h2>
+        <div class="modal-links">
+            <a href="https://github.com/Rishabh028/StayFinder" target="_blank" class="modal-link">
+                <i class="fab fa-github"></i> GitHub
+            </a>
+            <a href="https://rishabh028.github.io/StayFinder/index.html" target="_blank" class="modal-link">
+                <i class="fas fa-external-link-alt"></i> Live Demo
+            </a>
+        </div>
+        <div class="modal-section">
+            <h3>Overview</h3>
+            <p>
+                StayFinder is a modern, stylish Online Hotel Booking Website for discovering and booking unique stays. It features a beautiful UI, interactive map, user authentication, favorites, and a seamless booking experience.
+            </p>
+        </div>
+        <div class="modal-section">
+            <h3>Technologies Used</h3>
+            <div class="tech-grid">
+                <div class="tech-column">
+                    <h4>Frontend</h4>
+                    <ul>
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </div>
+                <div class="tech-column">
+                    <h4>Other</h4>
+                    <ul>
+                        <li>Leaflet.js (Maps)</li>
+                        <li>Font Awesome (Icons)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="modal-section">
+            <h3>Key Features</h3>
+            <ul class="features-list">
+                <li>Smart search by location, dates, and guests</li>
+                <li>Property listings with ratings and prices</li>
+                <li>Wishlist and favorites</li>
+                <li>Animated date picker and overlays</li>
+                <li>Language & currency switcher</li>
+                <li>Interactive map for property locations</li>
+                <li>Responsive, mobile-friendly design</li>
+            </ul>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+</html>

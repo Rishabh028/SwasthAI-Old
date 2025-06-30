@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name | Portfolio</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #0D021B;
+            color: #E0D7FF;
+        }
+        .download-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            font-size: 16px;
+            font-weight: bold;
+            font-style: italic;
+            color: #f0d3f2;
+            background-color: #9A44E5;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.5s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+.download-btn:hover {
+    background-color: #9A44E5;
+}
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: #1A0B36;
+        }
+        header h1 {
+            font-size: 24px;
+            margin: 0;
+            color: #E0D7FF;
+        }
+        nav a {
+            color: #E0D7FF;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 18px;
+        }
+        nav a:hover {
+            color: #B657FF;
+        }
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+            background-color: #1A0B36;
+            position: relative;
+        }
+        .hero img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+        }
+        .hero h2 {
+            margin-top: 20px;
+            font-size: 2.5rem;
+            color: #B657FF;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+            color: #E0D7FF;
+        }
+        .section {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+        .section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #B657FF;
+        }
+        .card {
+            background-color: #2B0E52;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+        .card img {
+            width: 80px;
+            height: 80px;
+            margin-right: 20px;
+        }
+        .card-content {
+            color: #E0D7FF;
+        }
+        .card-content h3 {
+            margin: 0 0 10px 0;
+            font-size: 1.5rem;
+            color: #B657FF;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #1A0B36;
+        }
+        footer a {
+            color: #B657FF;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 1.2rem;
+        }
+        footer a:hover {
+            color: #E0D7FF;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Your Logo</h1>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#Skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <img src="ProfilePic.jpg" alt="Profile Picture">
+        <h2>Hello! I’m Rishabh Rajak</h2>
+        <p>I'm a Electronics & Communication Engineer</p>
+        <p>Currently studying at <b>IIT Guwahati</b></p>
+        <a href="Resume.pdf" download="Rishabh's Resume.pdf" class="download-btn">Download My Resume</a>
+
+    </section>
+
+    <section class="section" id="education">
+        <h2>Education</h2>
+        <div class="card">
+            <img src="KV LOGO.png" alt="school kv">
+            <div class="card-content">
+                <h3>Schooling</h3>
+                <p>2010 - 2022</p>
+                <p>I have done my schooling from Kendriya Vidyalaya No-1 Ishapore.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="IITG Large Logo.gif" alt="College">
+            <div class="card-content">
+                <h3>Undergraduation</h3>
+                <p>2022 - 2026</p>
+                <p>I have done my UG in Electronics and Communication from IIT Guwahati.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="Skills">
+        <h2>Skills</h2>
+        <div class="card">
+            <div class="card-content">
+                <h4><li>Programming : Python, C/C++</li><br>
+                <li>Web/ App Technologies : HTML, CSS, JavaScript</li><br>
+                <li>Database Management : MySQL</li><br>
+                <li>Operationg Systems : Windows, Linux</li><br>
+                <li>Micellaneous : Arduino IDE, LabView, Autodesk</li>
+                </h4>
+            </div>   
+        </div>
+    </section>
+
+    <section class="section" id="projects">
+        <h2>Projects</h2>
+        <div class="card">
+            <img src="https://via.placeholder.com/80" alt="Project Image">
+            <div class="card-content">
+                <h3>Project Title</h3>
+                <p>Brief description of your project, technologies used, and key features.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/80" alt="Project Image">
+            <div class="card-content">
+                <h3>Project Title</h3>
+                <p>Brief description of your project, technologies used, and key features.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <p>Connect with me on:</p>
+        <a href="https://www.instagram.com/rishabh_0028/" target="_blank"><img src="insta.png" height="30" ></a>
+        <a href="https://www.linkedin.com/in/rishabh-rajak-621318316/" target="_blank"><img src="linkedin.png" height="30" ></a>
+        <a href="https://github.com/Rishabh028" target="_blank"><img src="github.png" height="30" ></a>
+        <p>Phone No : +91 6291688458</p>
+        <p>Gmail : rishabhrajak2004@gmail.com</p>
+
+    </footer>
+</body>
+</html>
