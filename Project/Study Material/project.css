@@ -552,4 +552,7 @@ hr {
     gap: 8px;
     padding: 18px 2vw 10px 2vw;
   }
-}
+    .footer-brand {
+      font-size: 1.1rem;
+    }
+  }
