@@ -2,6 +2,7 @@ import express from 'express';
 import { body } from 'express-validator';
 import { asyncHandler } from '../middleware/errorHandler.js';
 import { protect } from '../middleware/auth.js';
+import { registerValidation, loginValidation, validate } from '../middleware/validation.js';
 import * as authController from '../controllers/auth.controller.js';
 
 const router = express.Router();

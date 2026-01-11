@@ -112,9 +112,10 @@ app.use((req, res) => {
 });
 
 // Sentry error handler (must be after all other middleware and routes)
-if (process.env.SENTRY_DSN) {
-  app.use(Sentry.Handlers.errorHandler());
-}
+// Note: Sentry not configured yet. Uncomment when you add SENTRY_DSN
+// if (process.env.SENTRY_DSN) {
+//   app.use(Sentry.Handlers.errorHandler());
+// }
 
 // Global error handling middleware
 app.use(errorHandler);

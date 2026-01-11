@@ -6,7 +6,7 @@ generator client {
 }
 
 datasource db {
-  provider = "sqlite"
+  provider = "postgresql"
   url      = env("DATABASE_URL")
 }
 
@@ -153,8 +153,8 @@ model Appointment {
   updatedAt             DateTime  @updatedAt
 
   user                  User      @relation(fields: [userId], references: [id], onDelete: Cascade)
-  doctor                User      @relation("DoctorAppointments", fields: [doctorId], references: [id], onDelete: Cascade)
-  doctorProfile         Doctor    @relation(fields: [doctorId], references: [userId])
+  doctor                User      @relation("DoctorAppointments", fields: [doctorId], references: [id], onDelete: Cascade, map: "Appointment_doctor_fkey")
+  doctorProfile         Doctor    @relation(fields: [doctorId], references: [userId], map: "Appointment_doctorProfile_fkey")
   prescription          Prescription? @relation(fields: [prescriptionId], references: [id])
   callSession           CallSession?
   reviews               DoctorReview[]
