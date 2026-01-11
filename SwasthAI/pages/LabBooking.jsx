@@ -13,7 +13,7 @@ import {
   CheckCircle,
   Search
 } from 'lucide-react';
-import { Button } from '@/Components/ui/Button';
+import { Button } from '@/Components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/Components/ui/card';
 import { Input } from '@/Components/ui/input';
 import { Checkbox } from '@/Components/ui/checkbox';
