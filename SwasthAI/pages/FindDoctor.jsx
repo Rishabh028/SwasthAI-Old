@@ -5,10 +5,10 @@ import { ArrowLeft, Search, Filter, Video, MapPin, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Input } from '@/components/ui/input';
-import { Button } from '@/components/ui/Button';
-import DoctorCard from '@/components/doctor/DoctorCard';
-import { Skeleton } from '@/components/ui/skeleton';
+import { Input } from '@/Components/ui/input';
+import { Button } from '@/Components/ui/button';
+import DoctorCard from '@/Components/doctor/DoctorCard';
+import { Skeleton } from '@/Components/ui/skeleton';
 
 const specialties = [
   'All', 'General Physician', 'Cardiologist', 'Dermatologist', 'Pediatrician',
