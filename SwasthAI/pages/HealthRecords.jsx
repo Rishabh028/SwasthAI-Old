@@ -6,7 +6,7 @@ import {
   Filter, Calendar, ChevronDown, X, Loader2
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components/ui/Button';
 import { Input } from '@/components/ui/input';
 import RecordCard from '@/components/records/RecordCard';
 import { Skeleton } from '@/components/ui/skeleton';
