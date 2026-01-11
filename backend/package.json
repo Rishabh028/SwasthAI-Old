@@ -1,7 +1,7 @@
 {
   "name": "swasthai-backend",
   "version": "1.0.0",
-  "description": "SwasthAI Healthcare Platform - Backend API",
+  "description": "SwasthAI Healthcare Platform - Backend API - v1.1 Auth Fixed",
   "main": "src/app.js",
   "type": "module",
   "scripts": {

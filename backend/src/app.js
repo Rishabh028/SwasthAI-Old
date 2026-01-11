@@ -24,6 +24,9 @@ import forumRoutes from './routes/forum.routes.js';
 // Initialize Express app
 const app = express();
 
+// Trust proxy for production deployments
+app.set('trust proxy', 1);
+
 // Security Middleware
 app.use(helmet()); // Set various HTTP headers
 app.use(compression()); // Compress response payloads
@@ -50,6 +53,8 @@ const limiter = rateLimit({
   message: 'Too many requests from this IP, please try again later.',
   standardHeaders: true,
   legacyHeaders: false,
+  skip: (req, res) => req.path === '/health', // Skip health checks
+  keyGenerator: (req, res) => req.ip, // Use IP from trust proxy
 });
 
 // Apply rate limiting to all API routes
@@ -60,6 +65,7 @@ const authLimiter = rateLimit({
   windowMs: 15 * 60 * 1000,
   max: 5, // 5 requests per 15 minutes
   skipSuccessfulRequests: true,
+  keyGenerator: (req, res) => req.ip, // Use IP from trust proxy
 });
 
 // Request logging middleware
