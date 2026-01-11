@@ -6,8 +6,8 @@ import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import { motion } from 'framer-motion';
 import { format } from 'date-fns';
-import { Skeleton } from '@/components/ui/skeleton';
-import { Button } from '@/components/ui/button';
+import { Skeleton } from '@/Components/ui/skeleton';
+import { Button } from '@/Components/ui/button';
 
 const statusConfig = {
   booked: { icon: Clock, color: 'text-blue-600', bg: 'bg-blue-50', label: 'Booked' },

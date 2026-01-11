@@ -2,7 +2,7 @@ import React from 'react';
 import { FileText, Pill, TestTube, Stethoscope, Calendar, Download, Share2 } from 'lucide-react';
 import { format } from 'date-fns';
 import { motion } from 'framer-motion';
-import { Button } from '@/components/ui/button';
+import { Button } from '@/Components/ui/button';
 
 const recordTypeConfig = {
   prescription: {

@@ -7,9 +7,9 @@ import {
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { format } from 'date-fns';
-import { Button } from '@/components/ui/button';
-import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Skeleton } from '@/components/ui/skeleton';
+import { Button } from '@/Components/ui/button';
+import { Tabs, TabsList, TabsTrigger } from '@/Components/ui/tabs';
+import { Skeleton } from '@/Components/ui/skeleton';
 
 const statusConfig = {
   scheduled: {

@@ -6,8 +6,8 @@ import {
   ChevronDown, ChevronUp, Send
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
+import { Button } from '@/Components/ui/button';
+import { Input } from '@/Components/ui/input';
 
 const faqs = [
   {

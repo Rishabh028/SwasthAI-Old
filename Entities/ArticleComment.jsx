@@ -1,4 +1,4 @@
-const SavedArticleSchema = {
+const ArticleCommentSchema = {
   "name": "ArticleComment",
   "type": "object",
   "properties": {
@@ -21,4 +21,4 @@ const SavedArticleSchema = {
     "content"
   ]
 };
-export default SavedArticleSchema;
+export default ArticleCommentSchema;

@@ -5,8 +5,8 @@ import { ArrowLeft, BookmarkCheck, Trash2, Clock } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import { motion } from 'framer-motion';
-import { Button } from '@/components/ui/button';
-import { Skeleton } from '@/components/ui/skeleton';
+import { Button } from '@/Components/ui/button';
+import { Skeleton } from '@/Components/ui/skeleton';
 import { format } from 'date-fns';
 
 export default function SavedArticles() {

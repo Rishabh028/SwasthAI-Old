@@ -4,10 +4,10 @@ import { ArrowLeft, Bot, User, Loader2, RefreshCw } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import { motion, AnimatePresence } from 'framer-motion';
-import SymptomInput from '@/components/symptom/SymptomInput';
-import FollowUpQuestion from '@/components/symptom/FollowUpQuestion';
-import AssessmentResult from '@/components/symptom/AssessmentResult';
-import { Button } from '@/components/ui/button';
+import SymptomInput from '@/Components/symptom/SymptomInput';
+import FollowUpQuestion from '@/Components/symptom/FollowUpQuestion';
+import AssessmentResult from '@/Components/symptom/AssessmentResult';
+import { Button } from '@/Components/ui/button';
 
 export default function SymptomChecker() {
   const [stage, setStage] = useState('input'); // input, conversation, result

@@ -8,9 +8,9 @@ import {
   Shield, Loader2, Phone
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import SwasthAILogo from '@/components/ui/SwasthAILogo';
+import { Button } from '@/Components/ui/button';
+import { Input } from '@/Components/ui/input';
+import SwasthAILogo from '@/Components/ui/SwasthAILogo';
 
 const steps = [
   { id: 'welcome', title: 'Welcome' },

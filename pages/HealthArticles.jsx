@@ -3,9 +3,9 @@ import { base44 } from '@/api/base44Client';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { Search, Filter, Bookmark, BookmarkCheck, Clock, TrendingUp, Heart, Brain, Activity } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Input } from '@/components/ui/input';
-import { Button } from '@/components/ui/button';
-import { Skeleton } from '@/components/ui/skeleton';
+import { Input } from '@/Components/ui/input';
+import { Button } from '@/Components/ui/button';
+import { Skeleton } from '@/Components/ui/skeleton';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 

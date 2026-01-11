@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import { motion } from 'framer-motion';
 import { format } from 'date-fns';
-import { Skeleton } from '@/components/ui/skeleton';
+import { Skeleton } from '@/Components/ui/skeleton';
 
 const statusConfig = {
   pending: { icon: Clock, color: 'text-yellow-600', bg: 'bg-yellow-50', label: 'Pending' },

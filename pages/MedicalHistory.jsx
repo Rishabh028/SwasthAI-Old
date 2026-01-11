@@ -7,9 +7,9 @@ import {
   ArrowLeft, Heart, Plus, X, AlertCircle, Pill, Edit2, Trash2, Check
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Badge } from '@/components/ui/badge';
+import { Button } from '@/Components/ui/button';
+import { Input } from '@/Components/ui/input';
+import { Badge } from '@/Components/ui/badge';
 
 const commonConditions = [
   'Diabetes', 'Hypertension', 'Heart Disease', 'Asthma', 'Thyroid',

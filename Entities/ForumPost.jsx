@@ -1,4 +1,4 @@
-const SavedArticleSchema = {
+const ForumPostSchema = {
   "name": "ForumPost",
   "type": "object",
   "properties": {
@@ -50,4 +50,4 @@ const SavedArticleSchema = {
     "category"
   ]
 };
-export default SavedArticleSchema;
+export default ForumPostSchema;

@@ -8,8 +8,8 @@ import {
   Info, Phone, KeyRound, CheckCircle2
 } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
+import { Button } from '@/Components/ui/button';
+import { Input } from '@/Components/ui/input';
 
 const steps = [
   { id: 'info', title: 'About ABHA' },

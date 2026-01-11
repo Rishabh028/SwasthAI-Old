@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { base44 } from '@/api/base44Client';
 import { useQuery } from '@tanstack/react-query';
-import SwasthAILogo from '@/components/ui/SwasthAILogo';
-import QuickActions from '@/components/home/QuickActions';
-import UpcomingAppointments from '@/components/home/UpcomingAppointments';
-import HealthTips from '@/components/home/HealthTips';
+import SwasthAILogo from '@/Components/ui/SwasthAILogo';
+import QuickActions from '@/Components/home/QuickActions';
+import UpcomingAppointments from '@/Components/home/UpcomingAppointments';
+import HealthTips from '@/Components/home/HealthTips';
 import { Bell, Search } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { Link, useNavigate } from 'react-router-dom';

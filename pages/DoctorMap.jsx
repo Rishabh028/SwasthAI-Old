@@ -7,7 +7,7 @@ import { ArrowLeft, MapPin, Navigation, Star } from 'lucide-react';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
-import { Button } from '@/components/ui/button';
+import { Button } from '@/Components/ui/button';
 
 // Fix leaflet default marker icon issue
 delete L.Icon.Default.prototype._getIconUrl;

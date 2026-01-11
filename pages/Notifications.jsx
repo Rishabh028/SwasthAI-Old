@@ -6,7 +6,7 @@ import {
   Clock, TrendingUp, MessageSquare
 } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { Switch } from '@/components/ui/switch';
+import { Switch } from '@/Components/ui/switch';
 
 const notificationSettings = [
   {

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { Textarea } from '@/components/ui/textarea';
+import { Button } from '@/Components/ui/button';
+import { Textarea } from '@/Components/ui/textarea';
 import { Send, Mic, Loader2 } from 'lucide-react';
 import { motion } from 'framer-motion';
 

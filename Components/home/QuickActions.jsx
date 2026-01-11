@@ -11,8 +11,6 @@ import {
   Calendar,
   Phone,
   BookOpen,
-  Heart,
-  Activity,
   MessageSquare
 } from 'lucide-react';
 import { motion } from 'framer-motion';

@@ -5,8 +5,8 @@ import { ArrowLeft, Clock, Bookmark, BookmarkCheck, ThumbsUp, MessageCircle, Sha
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import { motion } from 'framer-motion';
-import { Button } from '@/components/ui/button';
-import { Textarea } from '@/components/ui/textarea';
+import { Button } from '@/Components/ui/button';
+import { Textarea } from '@/Components/ui/textarea';
 
 // Sample article data - in real app this would come from URL params
 const getArticleById = (id) => {

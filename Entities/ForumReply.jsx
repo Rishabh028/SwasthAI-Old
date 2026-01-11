@@ -1,4 +1,4 @@
-const SavedArticleSchema = {
+const ForumReplySchema = {
   "name": "ForumReply",
   "type": "object",
   "properties": {
@@ -25,4 +25,4 @@ const SavedArticleSchema = {
     "content"
   ]
 };
-export default SavedArticleSchema;
+export default ForumReplySchema;
