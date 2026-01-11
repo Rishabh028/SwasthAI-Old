@@ -5,6 +5,7 @@
   "main": "src/app.js",
   "type": "module",
   "scripts": {
+    "postinstall": "prisma generate 2>/dev/null || true",
     "start": "node src/app.js",
     "start:prod": "node src/app.js",
     "dev": "nodemon src/app.js",
