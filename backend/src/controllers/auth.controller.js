@@ -304,3 +304,96 @@ export const getMe = async (req, res, next) => {
     next(error);
   }
 };
+
+export const getCurrentUser = async (req, res, next) => {
+  try {
+    const userId = req.user?.id;
+
+    if (!userId) {
+      throw new AuthError('User not authenticated');
+    }
+
+    const user = await prisma.user.findUnique({
+      where: { id: userId },
+      include: {
+        healthProfile: true,
+        doctorProfile: true,
+      },
+    });
+
+    if (!user) {
+      throw new NotFoundError('User not found');
+    }
+
+    res.status(200).json({
+      success: true,
+      data: {
+        user: {
+          id: user.id,
+          email: user.email,
+          fullName: user.fullName,
+          phone: user.phone,
+          role: user.role,
+          profilePhotoUrl: user.profilePhotoUrl,
+          dateOfBirth: user.dateOfBirth,
+          gender: user.gender,
+          bloodGroup: user.bloodGroup,
+          city: user.city,
+          state: user.state,
+          country: user.country,
+          address: user.address,
+          abhaId: user.abhaId,
+        },
+      },
+    });
+  } catch (error) {
+    next(error);
+  }
+};
+
+export const logout = async (req, res, next) => {
+  try {
+    res.clearCookie('refreshToken');
+    res.status(200).json({
+      success: true,
+      message: 'Logged out successfully',
+    });
+  } catch (error) {
+    next(error);
+  }
+};
+
+export const verifyEmail = async (req, res, next) => {
+  try {
+    const { token } = req.body;
+
+    if (!token) {
+      throw new ValidationError('Verification token is required');
+    }
+
+    const decoded = jwt.verify(
+      token,
+      process.env.JWT_SECRET || 'your-secret-key'
+    );
+
+    const user = await prisma.user.update({
+      where: { id: decoded.userId },
+      data: { isVerified: true },
+    });
+
+    res.status(200).json({
+      success: true,
+      message: 'Email verified successfully',
+      data: {
+        user: {
+          id: user.id,
+          email: user.email,
+          fullName: user.fullName,
+          isVerified: user.isVerified,
+        },
+      },
+    });
+  } catch (error) {
+    next(error);
+  }
+};
