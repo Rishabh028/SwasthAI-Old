@@ -7,7 +7,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import SymptomInput from '@/components/symptom/SymptomInput.jsx';
 import FollowUpQuestion from '@/components/symptom/FollowUpQuestion.jsx';
 import AssessmentResult from '@/components/symptom/AssessmentResult.jsx';
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components/ui/Button';
 
 export default function SymptomChecker() {
   const [stage, setStage] = useState('input'); // input, conversation, result
