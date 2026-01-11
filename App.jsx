@@ -107,8 +107,6 @@ function AppRoutes() {
   }, [location.pathname]);
 
   return (
-    <Layout currentPageName={currentPageName}>
-  return (
     <>
       {/* Auth Routes - No Layout */}
       {isAuthPage && (
