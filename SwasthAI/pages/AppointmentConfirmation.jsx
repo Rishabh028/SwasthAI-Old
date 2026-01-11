@@ -12,8 +12,8 @@ import {
   Home,
   FileText
 } from 'lucide-react';
-import { Button } from '@/components/ui/Button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/Components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle } from '@/Components/ui/card';
 import { format } from 'date-fns';
 
 export default function AppointmentConfirmation() {
