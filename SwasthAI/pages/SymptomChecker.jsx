@@ -4,7 +4,7 @@ import { ArrowLeft, Bot, User, Loader2, RefreshCw } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import { motion, AnimatePresence } from 'framer-motion';
-import SymptomInput from '@/components/symptom/SymptomInput';
+import SymptomInput from '@/components/symptom/SymptomInput.jsx';
 import FollowUpQuestion from '@/components/symptom/FollowUpQuestion';
 import AssessmentResult from '@/components/symptom/AssessmentResult';
 import { Button } from '@/components/ui/button';
