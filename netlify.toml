@@ -1,5 +1,5 @@
 [build]
-  command = "npm install && npx vite build"
+  command = "npm install --include=dev && npx vite build"
   publish = "dist"
 
 [build.environment]
