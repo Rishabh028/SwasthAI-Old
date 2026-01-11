@@ -8,7 +8,7 @@ import {
 import { Link, useNavigate } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import { motion } from 'framer-motion';
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components/ui/Button';
 import { format, addDays } from 'date-fns';
 
 export default function DoctorProfile() {
