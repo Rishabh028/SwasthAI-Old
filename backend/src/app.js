@@ -71,6 +71,17 @@ const authLimiter = rateLimit({
 // Request logging middleware
 app.use(requestLogger);
 
+// Root endpoint
+app.get('/', (req, res) => {
+  res.status(200).json({
+    message: 'SwasthAI API Server',
+    version: '1.0.0',
+    status: 'running',
+    timestamp: new Date().toISOString(),
+    docs: 'See /api/v1 for API documentation',
+  });
+});
+
 // Health check endpoint
 app.get('/health', (req, res) => {
   res.status(200).json({
