@@ -6,17 +6,17 @@ import {
   Filter, Calendar, ChevronDown, X, Loader2
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Button } from '@/components/ui/Button';
-import { Input } from '@/components/ui/input';
-import RecordCard from '@/components/records/RecordCard';
-import { Skeleton } from '@/components/ui/skeleton';
+import { Button } from '@/Components/ui/button';
+import { Input } from '@/Components/ui/input';
+import RecordCard from '@/Components/records/RecordCard';
+import { Skeleton } from '@/Components/ui/skeleton';
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from '@/components/ui/select';
+} from '@/Components/ui/select';
 
 const recordTypes = [
   { key: 'all', label: 'All Records', icon: FileText },
