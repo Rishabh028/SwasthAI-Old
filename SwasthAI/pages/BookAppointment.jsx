@@ -12,7 +12,7 @@ import {
   CheckCircle,
   Loader2
 } from 'lucide-react';
-import { Button } from '@/components/ui/button.jsx';
+import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Textarea } from '@/components/ui/textarea';
 import { format, addDays } from 'date-fns';
