@@ -15,7 +15,7 @@ const sizes = {
   xl: 'px-8 py-4 text-xl'
 };
 
-export const button = React.forwardRef(({
+export const Button = React.forwardRef(({
   children,
   variant = 'primary',
   size = 'md',
@@ -42,4 +42,4 @@ export const button = React.forwardRef(({
   );
 });
 
-button.displayName = 'button';
+button.displayName = 'Button';
