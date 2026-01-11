@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import { motion, AnimatePresence } from 'framer-motion';
 import SymptomInput from '@/components/symptom/SymptomInput.jsx';
-import FollowUpQuestion from '@/components/symptom/FollowUpQuestion';
-import AssessmentResult from '@/components/symptom/AssessmentResult';
+import FollowUpQuestion from '@/components/symptom/FollowUpQuestion.jsx';
+import AssessmentResult from '@/components/symptom/AssessmentResult.jsx';
 import { Button } from '@/components/ui/button';
 
 export default function SymptomChecker() {
