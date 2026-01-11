@@ -16,7 +16,8 @@
     "lint": "eslint src/**/*.js",
     "lint:fix": "eslint src/**/*.js --fix",
     "format": "prettier --write src/**/*.js",
-    "build": "npm run migrate && npm run seed"
+    "build": "prisma generate",
+    "postinstall": "prisma generate"
   },
   "keywords": [
     "healthcare",
