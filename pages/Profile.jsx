@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { base44 } from '@/api/base44Client';
+import { useNavigate } from 'react-router-dom';
+import axiosClient from '@/api/axiosClient';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { 
   User, Mail, Phone, MapPin, Heart, AlertCircle, 
@@ -23,6 +24,7 @@ const menuItems = [
 ];
 
 export default function Profile() {
+  const navigate = useNavigate();
   const [user, setUser] = useState(null);
   const [isEditing, setIsEditing] = useState(false);
   const [uploadingPhoto, setUploadingPhoto] = useState(false);
@@ -30,7 +32,11 @@ export default function Profile() {
   const queryClient = useQueryClient();
 
   useEffect(() => {
-    base44.auth.me().then(setUser).catch(() => {});
+    // Get user from localStorage
+    const storedUser = localStorage.getItem('user');
+    if (storedUser) {
+      setUser(JSON.parse(storedUser));
+    }
   }, []);
 
   const { data: profile, isLoading } = useQuery({
@@ -80,8 +86,20 @@ export default function Profile() {
     }
   }, [profile]);
 
-  const handleLogout = () => {
-    base44.auth.logout();
+  const handleLogout = async () => {
+    try {
+      await axiosClient.post('/auth/logout');
+    } catch (error) {
+      console.error('Logout error:', error);
+    } finally {
+      // Clear auth data
+      localStorage.removeItem('authToken');
+      localStorage.removeItem('refreshToken');
+      localStorage.removeItem('user');
+      
+      // Redirect to login
+      navigate('/login');
+    }
   };
 
   const handlePhotoUpload = async (e) => {

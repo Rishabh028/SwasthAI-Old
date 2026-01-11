@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation, Navigate } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import Layout from './layout.jsx';
 
 // Import all pages
+import Login from './pages/Login.jsx';
+import Signup from './pages/Signup.jsx';
 import Home from './pages/Home.jsx';
 import SymptomChecker from './pages/SymptomChecker.jsx';
 import Appointments from './pages/Appointments.jsx';
@@ -52,11 +54,22 @@ function AppRoutes() {
   const location = useLocation();
   const [currentPageName, setCurrentPageName] = useState('Home');
 
+  // Check if user is logged in
+  const isAuthenticated = !!localStorage.getItem('authToken');
+  const isAuthPage = ['/login', '/signup'].includes(location.pathname);
+
   useEffect(() => {
+    // If not authenticated and not on auth page, redirect to login
+    if (!isAuthenticated && !isAuthPage && location.pathname !== '/') {
+      // Allow root path to redirect as needed
+    }
+
     // Map routes to page names
     const pathToPageName = {
       '/': 'Home',
       '/home': 'Home',
+      '/login': 'Login',
+      '/signup': 'Signup',
       '/symptom-checker': 'SymptomChecker',
       '/appointments': 'Appointments',
       '/appointment-confirmation': 'AppointmentConfirmation',
@@ -95,43 +108,58 @@ function AppRoutes() {
 
   return (
     <Layout currentPageName={currentPageName}>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/symptom-checker" element={<SymptomChecker />} />
-        <Route path="/appointments" element={<Appointments />} />
-        <Route path="/appointment-confirmation" element={<AppointmentConfirmation />} />
-        <Route path="/book-appointment" element={<BookAppointment />} />
-        <Route path="/doctor-profile" element={<DoctorProfile />} />
-        <Route path="/doctor-profile/:id" element={<DoctorProfile />} />
-        <Route path="/doctor-search" element={<DoctorSearch />} />
-        <Route path="/find-doctor" element={<FindDoctor />} />
-        <Route path="/health-records" element={<HealthRecords />} />
-        <Route path="/lab-booking" element={<LabBooking />} />
-        <Route path="/lab-tests" element={<LabTests />} />
-        <Route path="/lab-booking-history" element={<LabBookingHistory />} />
-        <Route path="/onboarding" element={<Onboarding />} />
-        <Route path="/pharmacy" element={<Pharmacy />} />
-        <Route path="/profile" element={<Profile />} />
-        <Route path="/abha-link" element={<ABHALink />} />
-        <Route path="/article-detail" element={<ArticleDetail />} />
-        <Route path="/article-detail/:id" element={<ArticleDetail />} />
-        <Route path="/create-post" element={<CreatePost />} />
-        <Route path="/doctor-map" element={<DoctorMap />} />
-        <Route path="/forum-post" element={<ForumPost />} />
-        <Route path="/forum-post/:id" element={<ForumPost />} />
-        <Route path="/health-articles" element={<HealthArticles />} />
-        <Route path="/health-coach" element={<HealthCoach />} />
-        <Route path="/health-forum" element={<HealthForum />} />
-        <Route path="/help-support" element={<HelpSupport />} />
-        <Route path="/language-settings" element={<LanguageSettings />} />
-        <Route path="/medical-history" element={<MedicalHistory />} />
-        <Route path="/medical-orders" element={<MedicalOrders />} />
-        <Route path="/medicine-order-history" element={<MedicineOrderHistory />} />
-        <Route path="/notifications" element={<Notifications />} />
-        <Route path="/saved-articles" element={<SavedArticles />} />
-      </Routes>
-    </Layout>
+  return (
+    <>
+      {/* Auth Routes - No Layout */}
+      {isAuthPage && (
+        <Routes>
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+        </Routes>
+      )}
+
+      {/* Protected Routes - With Layout */}
+      {!isAuthPage && (
+        <Layout currentPageName={currentPageName}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/symptom-checker" element={<SymptomChecker />} />
+            <Route path="/appointments" element={<Appointments />} />
+            <Route path="/appointment-confirmation" element={<AppointmentConfirmation />} />
+            <Route path="/book-appointment" element={<BookAppointment />} />
+            <Route path="/doctor-profile" element={<DoctorProfile />} />
+            <Route path="/doctor-profile/:id" element={<DoctorProfile />} />
+            <Route path="/doctor-search" element={<DoctorSearch />} />
+            <Route path="/find-doctor" element={<FindDoctor />} />
+            <Route path="/health-records" element={<HealthRecords />} />
+            <Route path="/lab-booking" element={<LabBooking />} />
+            <Route path="/lab-tests" element={<LabTests />} />
+            <Route path="/lab-booking-history" element={<LabBookingHistory />} />
+            <Route path="/onboarding" element={<Onboarding />} />
+            <Route path="/pharmacy" element={<Pharmacy />} />
+            <Route path="/profile" element={<Profile />} />
+            <Route path="/abha-link" element={<ABHALink />} />
+            <Route path="/article-detail" element={<ArticleDetail />} />
+            <Route path="/article-detail/:id" element={<ArticleDetail />} />
+            <Route path="/create-post" element={<CreatePost />} />
+            <Route path="/doctor-map" element={<DoctorMap />} />
+            <Route path="/forum-post" element={<ForumPost />} />
+            <Route path="/forum-post/:id" element={<ForumPost />} />
+            <Route path="/health-articles" element={<HealthArticles />} />
+            <Route path="/health-coach" element={<HealthCoach />} />
+            <Route path="/health-forum" element={<HealthForum />} />
+            <Route path="/help-support" element={<HelpSupport />} />
+            <Route path="/language-settings" element={<LanguageSettings />} />
+            <Route path="/medical-history" element={<MedicalHistory />} />
+            <Route path="/medical-orders" element={<MedicalOrders />} />
+            <Route path="/medicine-order-history" element={<MedicineOrderHistory />} />
+            <Route path="/notifications" element={<Notifications />} />
+            <Route path="/saved-articles" element={<SavedArticles />} />
+          </Routes>
+        </Layout>
+      )}
+    </>
   );
 }
 
