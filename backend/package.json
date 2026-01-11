@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "start": "node src/app.js",
-    "start:prod": "npx prisma db push --skip-generate && node src/app.js",
+    "start:prod": "node src/app.js",
     "dev": "nodemon src/app.js",
     "test": "jest --detectOpenHandles --forceExit",
     "test:watch": "jest --watch",
