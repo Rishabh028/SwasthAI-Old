@@ -11,7 +11,7 @@
 
 **A full-stack healthcare platform with telemedicine, health records, symptom checking, and community forums.**
 
-[Visit Live Site](https://swasthai-old.netlify.app) • [Backend API](https://swasthai-old-backend.onrender.com) • [GitHub](https://github.com/Rishabh028/SwasthAI-Old)
+[Visit Live Site](https://swasth-ai-health-navigator-c15b8341.base44.app/) • [Backend API](https://swasthai-old-backend.onrender.com) • [GitHub](https://github.com/Rishabh028/SwasthAI-Old)
 
 </div>
 
